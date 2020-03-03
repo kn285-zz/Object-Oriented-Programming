@@ -1,10 +1,10 @@
-#Object Oriented Programming
+# Object Oriented Programming
 
 There four different kinds of Object Oriented Programming: Encapsulation, Abstraction, Inheritance, and Polymorphism. 
 
 This Repository is here to help explain what each kind of Object Oriented Programming(OOP) is and what it is used for.
 
-####Encapsulation
+#### Encapsulation
 
  Encapsulation is used when we have a program that has few logically different objects which communicate with each others
  
