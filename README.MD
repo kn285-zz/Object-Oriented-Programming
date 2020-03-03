@@ -13,7 +13,7 @@ This Repository is here to help explain what each kind of Object Oriented Progra
  The object manages its own state via methods — and no other class can touch it unless explicitly allowed. If you want to communicate with the object, you should use the methods provided. But (by default), you can’t change the state.
  
  An example of Encapsulation is as shown:
- 
+ ````
  class Addition:
 
     @staticmethod
@@ -29,3 +29,4 @@ This Repository is here to help explain what each kind of Object Oriented Progra
             result = Addition.sum(result, value)
 
         return result
+```
