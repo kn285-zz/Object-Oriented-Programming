@@ -11,7 +11,7 @@ class MyTestCase(unittest.TestCase):
         self.statistics = Statistics()
 
     def test_calculator_return_sum(self):
-        result = self.calculator.sum(1, 2)
+        result = self.calculator.addition(1, 2)
         self.assertEqual(3, result)
 
 
