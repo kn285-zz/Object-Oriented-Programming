@@ -4,7 +4,7 @@ There four different kinds of Object Oriented Programming: Encapsulation, Abstra
 
 This Repository is here to help explain what each kind of Object Oriented Programming(OOP) is and what it is used for.
 
-#### Encapsulation
+### Encapsulation
 
  Encapsulation is used when we have a program that has few logically different objects which communicate with each others
  
@@ -13,7 +13,7 @@ This Repository is here to help explain what each kind of Object Oriented Progra
  The object manages its own state via methods — and no other class can touch it unless explicitly allowed. If you want to communicate with the object, you should use the methods provided. But (by default), you can’t change the state.
  
  An example of Encapsulation is as shown:
- ````
+ ```
  class Addition:
 
     @staticmethod
@@ -30,3 +30,29 @@ This Repository is here to help explain what each kind of Object Oriented Progra
 
         return result
 ```
+### Abstraction
+
+Abstraction is considered to be a natural extension of encapsulation.
+
+Typically when using OOP programs get extremely large, and objects communicate with each other more often than not. So, to maintain it is very difficult. This is where abstraction comes into play.
+
+Applying abstraction means that each object should *only* expose a high-level mechanism for using it. This mechanism should hide internal implementation details. It should only reveal operations relevant for the other objects.
+
+Preferably, this mechanism should be easy to use and should rarely change over time. Think of it as a small set of public methods which any other class can call without “knowing” how they work.
+
+```
+from MathOperations.Addition import Addition;
+from MathOperations.Multiplication import Subtraction;
+
+class Calculator:
+    Result = 0
+    def __init__(self):
+        pass
+
+    def addition(self, a, b):
+        return float(a) + float(b)
+
+    def subtraction(self, a, b):
+        return float(a) - float(b)
+```
+
