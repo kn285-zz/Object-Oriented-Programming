@@ -6,5 +6,5 @@ def Mean(data):
     num_values = len(data)
     total = 0
     for num in data:
-        total = Addition.sum(total, num)
+        total = Addition.addition(total, num)
     return Division.divide(total, num_values)
