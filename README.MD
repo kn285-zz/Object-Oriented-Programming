@@ -42,7 +42,7 @@ Preferably, this mechanism should be easy to use and should rarely change over t
 
 ```
 from MathOperations.Addition import Addition;
-from MathOperations.Multiplication import Subtraction;
+from MathOperations.Subtraction import Subtraction;
 
 class Calculator:
     Result = 0
@@ -55,4 +55,23 @@ class Calculator:
     def subtraction(self, a, b):
         return float(a) - float(b)
 ```
+
+### Inheritance
+
+Objects are often very similar, they typically common logic. However they are not entirely the same. If they share common logic but also have uniquie logic, how can we create two different classes. This is where inheritance comes into play.
+
+Inheritance is when you create a (child) class by deriving from another (parent) class. So we form a heirarchy. The child uses all the fields and methods from the parent class but implements its own fields and methods.
+
+```
+from Calculator.calculator import Calculator
+from MathOperations.mean import Mean
+
+class Statistics(Calculator):
+
+def mean(self, data):
+    self.Result = Mean(data)
+    return self.Result
+```
+
+
 
