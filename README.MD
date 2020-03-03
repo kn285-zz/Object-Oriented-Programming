@@ -4,7 +4,7 @@ There four different kinds of Object Oriented Programming: Encapsulation, Abstra
 
 This Repository is here to help explain what each kind of Object Oriented Programming(OOP) is and what it is used for.
 
-### Encapsulation
+## Encapsulation
 
  Encapsulation is used when we have a program that has few logically different objects which communicate with each others
  
@@ -30,7 +30,7 @@ This Repository is here to help explain what each kind of Object Oriented Progra
 
         return result
 ```
-### Abstraction
+## Abstraction
 
 Abstraction is considered to be a natural extension of encapsulation.
 
@@ -56,7 +56,7 @@ class Calculator:
         return float(a) - float(b)
 ```
 
-### Inheritance
+## Inheritance
 
 Objects are often very similar, they typically common logic. However they are not entirely the same. If they share common logic but also have uniquie logic, how can we create two different classes. This is where inheritance comes into play.
 
@@ -72,6 +72,45 @@ def mean(self, data):
     self.Result = Mean(data)
     return self.Result
 ```
+
+## Polymorphism
+
+Say we have a parent class and a few child classes which inherit from it. Sometimes we want to use a collection — for example a list — which contains a mix of all these classes. Or we have a method implemented for the parent class — but we’d like to use it for the children, too. Simply put, polymorphism gives a way to use a class exactly like its parent so there’s no confusion with mixing types. But each child class keeps its own methods as they are. This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. Then, each child class implements its own version of these methods.
+
+Any time a collection (such as a list) or a method expects an instance of the parent (where common methods are outlined), the language takes care of evaluating the right implementation of the common method — regardless of which child is passed.
+
+```
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class MyMainClass {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+```
+
+
 
 
 
